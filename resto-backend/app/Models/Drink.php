@@ -14,6 +14,12 @@ class Drink extends Model
         'slug',
         'description',
         'price',
-        'image'
+        'image',
     ];
+
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
 }

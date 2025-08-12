@@ -19,7 +19,8 @@ class MenuSeeder extends Seeder
             'Салаты',
             'Десерты',
             'Горячее',
-            'Закуски'
+            'Закуски',
+            'Напитки'
         ];
 
         foreach ($categories as $cat) {
@@ -96,15 +97,18 @@ class MenuSeeder extends Seeder
             ['Айран', 'Освежающий кисломолочный напиток', 130, 'https://images.unsplash.com/photo-1612197527762-29a16c9f3b77']
         ];
 
+        $categoryId = Category::where('name', 'Напитки')->value('id');
         foreach ($drinks as [$name, $desc, $price, $img]) {
-            Drink::firstOrCreate(
-                ['slug' => Str::slug($name)],
+            Drink::updateOrInsert(
+                ['slug' => Str::slug($name),
+                ],
                 [
                 'name' => $name,
                 'slug' => Str::slug($name),
                 'description' => $desc,
                 'price' => $price,
-                'image' => $img
+                'image' => $img,
+                'category_id' => $categoryId
             ]);
         }
     }
