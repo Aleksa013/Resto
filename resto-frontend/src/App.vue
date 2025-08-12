@@ -15,7 +15,19 @@ onMounted(async () => {
 </script>
 
 <template>
-  <h1>{{ message ?? result[0].name }}</h1>
+  <h1 class="header">{{ message ?? result[0].name }}</h1>
+  <img src="../public/images/logo.png" class="logo" />
 </template>
 
-<style scoped></style>
+<style lang="scss" scoped>
+@use '../public/styles/main.scss' as styles;
+
+.logo {
+  width: 150px;
+  height: 150px;
+}
+
+.header {
+  color: styles.$accent-color;
+}
+</style>
