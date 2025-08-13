@@ -1,0 +1,4 @@
+{
+  "menu": ["menu", "about", "contacts"],
+  "logoPath": "src/assets/images/logoResto.png"
+}
