@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@theme {
+  --color-base: #fafaf5;
+  --color-accent: #d1495b;
+  --color-accent_second: #8e9775;
+  --color-my-text: #2e2e2e;
+  --text-middle-size: 16px;
+}

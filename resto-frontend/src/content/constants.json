@@ -1,4 +1,4 @@
 {
-  "menu": ["menu", "about", "contacts"],
+  "menu": ["Home", "Menu", "Contacts"],
   "logoPath": "src/assets/images/logoResto.png"
 }
